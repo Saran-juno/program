@@ -5,11 +5,33 @@
 
 scale=1">
         <style>
+            *{
+                box-sizing: border-box;
+            }
             body{
                 margin: 0;
-                font-family:Arial, Helvetica, sans-serif;  
-                background-color:blueviolet;   }
-        .topnav{
+                font-family:Arial;
+                font-size: 17px;  
+                background-color: aliceblue;  
+             }
+             .container{
+                position: relative;
+                max-width: 800px;
+                margin: 0 auto;
+             }
+             .container img{vertical-align: middle;}
+             .container .content{
+                position: absolute;
+                bottom: 0;
+                color: #f1f1f1;
+                width: 100%;
+                padding: 20px;
+                background: rgb(0,0,0);/*fallback color */
+                background: rgb(0,0,0,0.5) /*black background with 0.5 opacity */
+                
+             }
+        
+           .topnav{
             overflow: hidden;
             background-color:#333;
         }
@@ -52,51 +74,34 @@ scale=1">
                 display:block;
                 text-align: left;
             }
-        }
-            .myfirst{
-                margin: active;
-                padding:16px;
-                background-color: chocolate;
-                }
-                h1 {
-                  background-color: brown;
-                  text-align: center;
-                  color: aqua;
-                }
-                p {
-                  color: bisque;
-                  text-align: center;
-                }
+            
               </style>
   </head>
 <body>
     <div class="topnav" id="myTopnav">
         <a href="index.html" class="active"> Home</a>
             <a href="about.html">About</a>
-            <a href="#contact">Contact</a>
+            <a href="contact.html">Contact</a>
             <a href="javscript:void(0);"
             class="icon"onclick="myfunction()">
             <i class="fa fa-bars"></i>
             </a>
     </div>
 
-    <div style="padding-left: 16px">
-            <article class="myfirst">
-                    <h1>Welcome to our Website</h1>
-                <article class="browser">
-                    <a target="_blank" href="Lighthouse.jpg">
-                        <img src="Lighthouse.jpg" alt="Forest" style="width: 150px;">
-                    </a>
-                    <p>In this page we create our first project named facial 
+    <div class="container">
+        <img src="blur image.jpg" alt="Blurimage" style="width: 100%;"/>
+        <div class="content">
+            <h1>Home Made Beauty pack</h1>
+            <p>In this page we create our first project named facial 
 
-guidence for women .we provide various methods to keep our face 
-
-brighter,moisturize,dry or exfoliate the skin with home made 
-
-ingredient.</p>
-     </div>
-  
-     <script>
+                guidence for women .we provide various methods to keep our face 
+                
+                brighter,moisturize,dry or exfoliate the skin with home made 
+                
+                ingredient.</p>
+        </div>
+    </div>
+   <script>
          function myfunction() {
              var x=document.getElementById("myTopnav");
              if (x.className === "topnav") {
@@ -108,12 +113,5 @@ ingredient.</p>
              
          }
     </script>
-
-    
-    
-    <form action="/action.php">
-      <input type="file" id="myfile" name="filename" />
-      <input type="submit" />
-    </form>
-  </body>
+</body>
 </html>

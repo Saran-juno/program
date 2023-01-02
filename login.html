@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<html>
+
+</html>
 <head>
   <meta name="viewport" content=width=device-width, initial-scale-1>
   <style>
@@ -110,6 +113,17 @@
 
                         }
                         </style>
+                        <script>
+                          //get the modal
+                          var modal=document.getElementById('id01');
+
+                          //when the user click anywhere outside of the window close it
+                          window.onclick=function(event){
+                            if(event.target==modal){
+                              modal.style.display="none";
+                            }
+                          }
+                        </script>
                         </head>
                         <body>
                           <h1>WELCOME</h1>
@@ -138,16 +152,6 @@
                             </form>
                           </div>
 
-                          <script>
-                            //get the modal
-                            var modal=document.getElementById('id01');
-
-                            //when the user click anywhere outside of the window close it
-                            window.onclick=function(event){
-                              if(event.target==modal){
-                                modal.style.display="none";
-                              }
-                            }
-                          </script>
+                          
                         </body>
                         </html>

@@ -5,9 +5,48 @@
 
 scale=1">
 <style>
-    body{
-        background-color: aqua;
+    *{
+        box-sizing: border-box;
     }
+    body{
+        background-color:#f1f1f1;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    .main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+
     p{
         text-align: center;
         text-decoration: none;
@@ -15,24 +54,47 @@ scale=1">
         font-family: 'Times New Roman', Times, serif;
         color: brown;
     }
-    ol{
-        color: black;
-        text-align: center;
-        font-size: small;
-        font-style: italic;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
 </style>
 </head>
 <body>
-    <p>We have years of experience in this field we create home made product which bring incredible feedbacks from our customer.young women loves our product .it is usefull in our daily route.</p>
-<p>We provide different type of face pack :</p>
-<ol>
-    <li>Tomato face pack</li>
-    <li>Honey face pack</li>
-    <li>Cucumber face pack</li>
-    <li>Curd face pack</li>
-</ol>
+    <div class="main">
+        <h3> About Face pack</h3>
+        <hr>
+        <p>We have years of experience in this field we create home made product which bring incredible feedbacks from our customer.young women loves our product .it is usefull in our daily route.</p>
+        <h4>We provide different Type of face pack :</h4>
+
+        <div class="row">
+                <div class="content">
+                    <img src="tomato.jpg" alt="tomato" style="width:100%">
+                    <h3>Tomato Face Pack</h3>
+                    <p>Tomato face pack work as a natural astringent that helps tighten the skin as well as shrink large pores, leaving the skin tight and glowing.</p>
+                    <dl>
+                        <dt>Tomato Rub </dt>
+                        <dd>Rubbing tomato on the face every day helps to tighten the pores.</dd>
+                        <dt>Tomato and sugar mask</dt>
+                        <dd>This mask helps remove dead skin cells, dirt, and excess oil from your skin, leaving it soft and glowing. Mix the sugar and tomato juice to form a paste. Apply it to your face and wait for 10 minutes. Rinse with lukewarm water.</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <img src="curd.jpg" alt="curd" style="width:100%">
+                    <h3>Curd Face Pack </h3>
+                    <p>It can soothe the skin and improve its health and moisture levels. It also helps exfoliate and nourish the skin.</p>
+                     <dl>
+                        <dt>Curd and Honey mask</dt>
+                        <dd>Mix 2 tablespoons of curd with a tablespoon of honey. Apply this mixture to your face and leave it on for about 20 minutes. Wash the mixture off with cold water later.</dd>
+                        <dt>Curd with orange peel mask</dt>
+                        <dd>Take 1 tbsp of orange peel powder and 2 tbsp of yogurt. Mix well. Apply on face and wash off after 20 minutes to get clear, fresh, and toned up tight looking skin.</dd>
+                     </dl>       
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>
+
+
+

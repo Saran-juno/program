@@ -26,8 +26,21 @@ h1 {
 }
 
 .row {
-  margin: 8px -16px;
+  margin: 10px -16px;
 }
+  /* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
 .row:after {
   content: "";
   display: table;
@@ -39,36 +52,49 @@ h1 {
   background-color: white;
   padding: 10px;
 }
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 50%;
-  }
+  /* The "show" class is added to the filtered elements */
+.show {
+  display: block;
 }
-  a {
-    align:top-right;}
 
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
 
-    p{
-        text-align: center;
-        text-decoration: none;
-        font-size: medium;
-        font-family: 'Times New Roman', Times, serif;
-        color: brown;
-    }
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
 </style>
 </head>
 <body>
-  <a href="./contact">Next</a>
-  <a href="./index">Back</a>
     <div class="main">
         <h3> About Face pack</h3>
+       <a href="./contact">Next</a>
+  <a href="./index">Back</a>
+ 
         <hr>
         <p>We have years of experience in this field we create home made product which bring incredible feedbacks from our customer.young women loves our product .it is usefull in our daily route.</p>
         <h4>We provide different Type of face pack :</h4>
+      <div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('tomato')">Tomato face pack </button>
+  <button class="btn" onclick="filterSelection('rice')"> Rice face pack</button>
+  <button class="btn" onclick="filterSelection('curd')"> Curd face pack</button>
+</div>
+
 
         <div class="row">
+          <div class="column tomato">
                 <div class="content">
                     <img src="tomato.jpg" alt="tomato" style="width:60%">
                     <h3>Tomato Face Pack</h3>
@@ -76,19 +102,62 @@ h1 {
                     <dl>
                         <dt>Tomato Rub </dt>
                         <dd>Rubbing tomato on the face every day helps to tighten the pores.</dd>
-                        <dt>Tomato and sugar mask</dt>
+                        <dt></dt>
                         <dd>This mask helps remove dead skin cells, dirt, and excess oil from your skin, leaving it soft and glowing. Mix the sugar and tomato juice to form a paste. Apply it to your face and wait for 10 minutes. Rinse with lukewarm water.</dd>
                     </dl>
                 </div>
             </div>
-            <div class="column">
+            <div class="column tomato">
                 <div class="content">
-                    <img src="curd.jpg" alt="curd" style="width:60%">
-                    <h3>Curd Face Pack </h3>
-                    <p>It can soothe the skin and improve its health and moisture levels. It also helps exfoliate and nourish the skin.</p>
-                     <dl>
-                        <dt>Curd and Honey mask</dt>
+                    <img src="cucutomato" alt="cucutomato" style="width:60%">
+                    <h3>Tomato oatmeal Face Pack </h3>
+                  <p>It improving the skin texture by removing the accumulated dead skin cells.</p>
+                  <dl>
+                    <dt>Tomato oatmeal Mask</dt>
+                    <dd>1 tbsp oatmeal, 1 tbsp cucumber juice ,Tomato juice. Blend all the ingredients to make a smooth paste. Massage this mask into your skin using gentle upward motions for a couple of minutes and then leave it for 10 minutes.</dd>
+                  </dl>
+              </div>
+          </div>
+               <div class="column tomato">
+                <div class="content">
+                  <img src="tomsugar.jpg" alt="tomsugar" style="width:60%">
+                  <h3>Tomato with sugar mask</h3>
+                  <p>It can soothe the skin and improve its health and moisture levels. It also helps exfoliate and nourish the skin.</p>
+                  <dl>
+                    <dt>Tomato and sugar face pack</dt>
+                    <dd>cut a tomato in half and spread a teaspoon of sugar on it. Now gently scrub it all over your face.dont scratch harsh on skin.wash it off with  water and apply moisturizer later.</dd>
+                  </dl>
+                 </div>
+          </div>
+                  
+                    <div class="column curd">
+                      <div class="content">
+                  <img src="curd.jpg" alt="curd" style=width:60%">
+                  <h3>Curd with Honey Face pack</h3>
+                      <p>Works as a natural exfoliator and  natural moisturiser it Provides face and skin hydration.</p>
+                        <dl>
+                           <dt>Curd and Honey mask</dt>
                         <dd>Mix 2 tablespoons of curd with a tablespoon of honey. Apply this mixture to your face and leave it on for about 20 minutes. Wash the mixture off with cold water later.</dd>
+                                       
+                 </dl>
+             </div>              
+           </div>                                                      
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                                                                 
+                         
+                                                                 
+                                                                 
+                   
+                                                                 
+      
+                    
+                 
                         <dt>Curd with orange peel mask</dt>
                         <dd>Take 1 tbsp of orange peel powder and 2 tbsp of yogurt. Mix well. Apply on face and wash off after 20 minutes to get clear, fresh, and toned up tight looking skin.</dd>
                      </dl>       
